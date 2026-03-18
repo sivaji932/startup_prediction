@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Startup Parameters</h1>
+        <form action="/predict" method="post">
+            <label for="age_first_funding">Age at First Funding Year:</label>
+            <input type="text" id="age_first_funding" name="age_first_funding" required>
+
+            <label for="age_last_funding">Age at Last Funding Year:</label>
+            <input type="text" id="age_last_funding" name="age_last_funding" required>
+
+            <label for="age_first_milestone">Age at First Milestone Year:</label>
+            <input type="text" id="age_first_milestone" name="age_first_milestone" required>
+
+            <label for="age_last_milestone">Age at Last Milestone Year:</label>
+            <input type="text" id="age_last_milestone" name="age_last_milestone" required>
+
+            <label for="relationships">Number of Relationships:</label>
+            <input type="text" id="relationships" name="relationships" required>
+
+            <label for="funding_rounds">Number of Funding Rounds:</label>
+            <input type="text" id="funding_rounds" name="funding_rounds" required>
+
+            <label for="total_funding">Total Funding (in USD):</label>
+            <input type="text" id="total_funding" name="total_funding" required>
+
+            <label for="milestones">Number of Milestones:</label>
+            <input type="text" id="milestones" name="milestones" required>
+
+            <label for="avg_participants">Average Participants:</label>
+            <input type="text" id="avg_participants" name="avg_participants" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
